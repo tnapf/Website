@@ -5,7 +5,6 @@
         "twig/twig": "^3.5",
         "httpsoft/http-response": "^1.0",
         "tnapf/router": "^4.3",
-        "guzzlehttp/guzzle": "^7.5",
         "symfony/http-client": "^6.2",
         "nyholm/psr7": "^1.7",
         "knplabs/github-api": "^3.0"
