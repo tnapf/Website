@@ -35,3 +35,7 @@ The website for TNAPF's documentation
 * [twig/twig: ^3.5](https://packagist.org/packages/twig/twig)
 * [httpsoft/http-response: ^1.0](https://packagist.org/packages/httpsoft/http-response)
 * [tnapf/router: ^4.3](https://packagist.org/packages/tnapf/router)
+* [guzzlehttp/guzzle: ^7.5](https://packagist.org/packages/guzzlehttp/guzzle)
+* [symfony/http-client: ^6.2](https://packagist.org/packages/symfony/http-client)
+* [nyholm/psr7: ^1.7](https://packagist.org/packages/nyholm/psr7)
+* [knplabs/github-api: ^3.0](https://packagist.org/packages/knplabs/github-api)
