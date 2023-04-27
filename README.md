@@ -1,5 +1,5 @@
 # Tnapf/Website
-The website for TNAPF's documentation
+The website for TNAPF's documentation (NOTE THIS SITE IS STILL IN DEVELOPMENT)
 
 # Basic Setup
 1. Clone the repository to your local machine.
