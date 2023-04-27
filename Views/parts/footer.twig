@@ -1,0 +1,48 @@
+<div class="ui inverted attached segment" id="footer">
+    <div class="ui center aligned wide container">
+        <div class="ui stackable inverted divided grid">
+            <div class="seven wide column">
+                <h4 class="ui inverted header">What is Totally Not Another PHP Framework?</h4>
+                <p>
+                    Totally Not Another PHP Framework (TNAPF) is a lightweight PHP framework designed to make web
+                    development easier and more efficient. TNAPF's acronym is a nod to the common complaint that there
+                    are already too many PHP frameworks out there. You can use as much of TNAPF as you want in pair with
+                    tools you've already come to love. Whether you are a seasoned developer or just
+                    starting out, TNAPF can help you build web applications quickly and efficiently.
+                </p>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">Resources</h4>
+                <div class="ui inverted link list">
+                    <a target="_blank" href="https://github.com/tnapf" class="item">Github</a>
+                    <a target="_blank" href="https://discord.gg/TgrcSkuDtQ" class="item">Discord</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header">Packages</h4>
+                <div class="ui inverted link list">
+                    {% for repo in github().repositories %}
+                        <a target="_blank" href="{{ repo.html_url }}" class="item">{{ repo.name }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="developers three wide column">
+                <h4 class="ui inverted header">Members</h4>
+                <div class="ui inverted link list">
+                    {% for member in github().members %}
+                    <a target="_blank" class="item" href="{{ member.html_url }}">
+                        <img src="{{ member.avatar_url }}" alt="{{ member.login }}'s profile picture" class="ui avatar image">
+                        <span>{{ member.login }}</span>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <img src="/img/logo.png" class="ui centered tiny image">
+        <div class="ui horizontal inverted small divided link list">
+            <a href="https://githhub.com/tnapf/privacy" class="item">Privacy Police</a>
+            <a href="https://github.com/tnapf/cookies" class="item">Cookie Policy</a>
+        </div>
+    </div>
+</div>

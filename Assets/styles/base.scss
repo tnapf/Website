@@ -1,0 +1,25 @@
+@import "colors";
+@import "parts/buttons";
+@import "parts/navigation";
+@import "parts/tooltips";
+@import "parts/footer";
+
+#main {
+    min-height: 75vh !important;
+}
+
+a.primary.link {
+    color: $primary;
+
+    &:hover {
+        color: darken($primary, 20%);
+    }
+}
+
+span.ui.primary.text {
+    color: $primary;
+}
+
+span.ui.secondary.text {
+    color: $secondary;
+}

@@ -1,0 +1,12 @@
+{% extends "templates/base.twig" %}
+
+{% block head %}
+<title>Page Not Found - Totally Not Another PHP Framework</title>
+{{ entrypoint('base')|raw }}
+{% endblock %}
+
+{% block body %}
+<div id="main" style="text-align: center;" class="ui inverted attached segment">
+    <span class="ui big text"><b>{{ uri }}</b> cannot be found</span>
+</div>
+{% endblock %}

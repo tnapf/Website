@@ -1,0 +1,5 @@
+<div class="ui inverted relaxed big divided list">
+    {% for event in events %}
+        {{ render_github_event(event)|raw }}
+    {% endfor %}
+</div>

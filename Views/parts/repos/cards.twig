@@ -1,0 +1,15 @@
+<div class="ui link inverted cards">
+    {% for repo in github().repositories %}
+    <div onclick="window.open('https://github.com/{{ repo.full_name }}', '_blank')" class="ui card">
+        <div class="content">
+            <div class="header"><span class="ui primary text">{{ repo.name }}</span></div>
+            <div class="meta">
+                <span><i class="code branch icon"></i> {{ repo.forks }}</span>
+                <span><i class="eye icon"></i> {{ repo.watchers }}</span>
+                <span><i class="star icon"></i> {{ repo.stargazers_count }}</span>
+            </div>
+            <p>{{ repo.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>

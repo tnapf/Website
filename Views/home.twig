@@ -1,0 +1,33 @@
+{% extends "templates/base.twig" %}
+
+{% block head %}
+<title>Totally Not Another PHP Framework</title>
+{{ entrypoint('home')|raw }}
+{% endblock %}
+
+{% block body %}
+<div id="main" class="ui inverted attached segment">
+    <div class="ui wide container">
+        <img src="/img/logo.png" alt="Logo">
+        <div class="ui inverted massive header">Totally Not Another PHP Framework</div>
+        <div class="ui big animated fade primary button">
+            <div class="visible content">Get Started</div>
+            <div class="hidden content">
+                <i class="rocket icon"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="packages" class="ui inverted attached segment">
+    <div class="ui wide container">
+        <div class="ui massive inverted header">Github Repositories</div>
+        {{ render('parts.repos.cards', { repos: github().repositories })|raw }}
+    </div>
+</div>
+<div id="events" class="ui inverted attached segment">
+    <div class="ui wide container">
+        <div class="ui massive inverted header">Github Events</div>
+        {{ render("parts.events.list", { events: github().events })|raw }}
+    </div>
+</div>
+{% endblock %}

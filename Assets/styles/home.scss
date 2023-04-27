@@ -1,0 +1,30 @@
+#main {
+    $color: #00000070;
+    background: linear-gradient($color, $color), url('../img/code2.jpg') !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    min-height: unset !important;
+
+    > div {
+        text-align: center;
+
+        > img {
+            border-radius: 5px !important;
+            max-width: 300px;
+            width: 70%;
+        }
+
+        > .button {
+            width: 220px;
+        }
+    }
+}
+
+#events {
+    div.list > div.item div.meta {
+        @media screen and (max-width: 690px) {
+            display: none !important;
+        }
+    }
+}

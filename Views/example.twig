@@ -1,0 +1,12 @@
+{% extends "templates/base.twig" %}
+
+{% block head %}
+<title>Totally Not Another PHP Framework</title>
+{{ entrypoint('base')|raw }}
+{% endblock %}
+
+{% block body %}
+<div id="main" class="ui inverted attached segment">
+    <div class="ui massive centered header">Welcome To Your Page!</div>
+</div>
+{% endblock %}

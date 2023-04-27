@@ -1,0 +1,12 @@
+@import '../colors';
+
+#navigation {
+    border: unset !important;
+    border-bottom: $black 1px solid !important;
+
+    .logo.item {
+        &:hover {
+            background-color: unset !important;
+        }
+    }
+}
