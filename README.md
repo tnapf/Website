@@ -1,5 +1,5 @@
-# PHP-Website-Template
-A website template that uses PHP 8.2, Twig, Fomantic-UI, Webpack and more for building fast and maintainable websites.
+# Tnapf/Website
+The website for TNAPF's documentation
 
 # Basic Setup
 1. Clone the repository to your local machine.
