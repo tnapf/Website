@@ -10,7 +10,7 @@ $tooltips: (
     $border-color: darken($background-color, $amount: 5%);
     $color: #fff;
 
-    [data-tooltip] {
+    [data-tooltip].#{$name} {
         &::after {
             background-color: $background-color;
             transition: inherit;
