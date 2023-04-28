@@ -1,4 +1,4 @@
-<div class="ui inverted relaxed big divided list">
+<div class="ui inverted relaxed {{ size ?? '' }} divided list">
     {% for event in events %}
         {{ render_github_event(event)|raw }}
     {% endfor %}

@@ -21,7 +21,7 @@
 <div id="events" class="ui inverted attached segment">
     <div class="ui wide container">
         <div class="ui massive inverted header">Github Events</div>
-        {{ render("parts.events.list", { events: github().events })|raw }}
+        {{ render("parts.events.list", { events: github().events, size: "large" })|raw }}
     </div>
 </div>
 {% endblock %}
