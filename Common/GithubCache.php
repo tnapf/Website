@@ -16,6 +16,7 @@ class GithubCache implements JsonSerializable {
     private static self $instance;
     private const CACHE_FILE = __ROOT__ . "/Cache/github.json";
     private const ORG = "tnapf";
+    private const EXPIRATION = 86400;
 
     public function __construct() {
         $this->client = env()->github;
@@ -29,7 +30,7 @@ class GithubCache implements JsonSerializable {
 
         $cache = json_decode(file_get_contents(self::CACHE_FILE), true);
 
-        if ($cache->expiration < time()) {
+        if ($cache['expiration'] > time()) {
             $this->repositories = $cache['repositories'];
             $this->members = $cache['members'];
             $this->events = $cache['events'];
@@ -52,7 +53,7 @@ class GithubCache implements JsonSerializable {
             "repositories" => $this->repositories,
             "members" => $this->members,
             "events" => $this->events,
-            "expiration" => $this->expiration ?? time() + 86400
+            "expiration" => $this->expiration ?? time() + self::EXPIRATION
         ];
     }
 
