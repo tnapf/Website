@@ -1,4 +1,4 @@
-<div class="ui link inverted cards">
+<div class="ui link inverted {{ centered ? 'centered' : '' }} cards">
     {% for repo in github().repositories %}
     <div onclick="window.open('https://github.com/{{ repo.full_name }}', '_blank')" class="ui card">
         <div class="content">
