@@ -2,7 +2,7 @@
     <i class="large green code branch middle aligned icon"></i>
     <div class="content">
         {{ render('parts.events.meta', { event: event })|raw }}
-        <div class="header">{{ event.payload.ref }} created in <a href="https://github.com/{{ event.repo.name }}" target="_blank">{{ event.repo.name }}</a></div>
+        <div class="header">{{ event.payload.ref }} created in {{ render('parts.events.repo', {event: event})|raw }}</div>
         {{ render('parts.events.time', { event: event })|raw }}
     </div>
 </div>

@@ -6,7 +6,7 @@
             <a target="_blank" href="{{ event.payload.pull_request.html_url }}">
                 {{event.payload.pull_request.title }}
             </a> opened in
-            <a href="https://github.com/{{ event.repo.name }}" target="_blank">{{ event.repo.name }}</a>
+            {{ render('parts.events.repo', {event: event})|raw }}
         </div>
         {{ render('parts.events.time', { event: event })|raw }}
     </div>
