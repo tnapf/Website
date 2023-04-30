@@ -1,6 +1,6 @@
 <div class="ui inverted attached segment" id="footer">
     <div class="ui center aligned wide container">
-        <div class="ui stackable center aligned inverted divided grid">
+        <div class="ui stackable center aligned equal width inverted divided grid">
             {# <div class="four wide column">
                 <h4 class="ui inverted header">What is Totally Not Another PHP Framework?</h4>
                 <p>
@@ -11,14 +11,14 @@
                     starting out, TNAPF can help you build web applications quickly and efficiently.
                 </p>
             </div> #}
-            <div class="three wide column">
+            <div class="column">
                 <h4 class="ui inverted header">Resources</h4>
                 <div class="ui inverted link list">
                     <a target="_blank" href="https://github.com/tnapf" class="item">Github</a>
                     <a target="_blank" href="https://discord.gg/TgrcSkuDtQ" class="item">Discord</a>
                 </div>
             </div>
-            <div class="three wide column">
+            <div class="column">
                 <h4 class="ui inverted header">Repositories</h4>
                 <div class="ui inverted link list">
                     {% for repo in github().repositories %}
@@ -26,7 +26,7 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="three wide column">
+            <div class="column">
                 <div class="ui inverted header">Packages</div>
                 <div class="ui inverted link list">
                     {% for package in packagist().packages %}
@@ -34,7 +34,7 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="developers three wide column">
+            <div class="developers column">
                 <h4 class="ui inverted header">Members</h4>
                 <div class="ui inverted link list">
                     {% for member in github().members %}
