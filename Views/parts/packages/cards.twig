@@ -1,0 +1,26 @@
+<div class="ui inverted {{ centered ? 'centered' : '' }} cards">
+    {% for package in packages %}
+    <div class="ui card">
+        <div class="content">
+            <div class="header"><span class="ui primary text">{{ package.name }} {{
+                    packagist().getLatestVersion(package.versions) }}</span></div>
+            <div class="meta">
+                <span><i class="cloud download alternate icon"></i> {{ package.downloads.total }}</span>
+            </div>
+            <p>{{ package.description }}</p>
+        </div>
+        <a href="/docs/{{ package.name }}" class="ui primary attached button">
+            <i class="book icon"></i>
+            View Documentation
+        </a>
+        <a href="{{ package.repository }}" target="_blank" class="ui blue attached button">
+            <i class="github icon"></i>
+            View Repository
+        </a>
+        <a href="https://packagist.org/packages/{{ package.name }}" target="_blank" class="ui orange bottom attached button">
+            <i class="box icon"></i>
+            View Package
+        </a>
+    </div>
+    {% endfor %}
+</div>
