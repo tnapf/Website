@@ -12,6 +12,10 @@ Router::get("/repositories", Render::class)
     ->addStaticArgument("path", "repos")
 ;
 
+Router::get("/packages", Render::class)
+    ->addStaticArgument("path", "packages")
+;
+
 Router::catch(HttpNotFound::class, Render::class)
     ->addStaticArgument("path", "404")
     ->addStaticArgument("context", ["uri" => $_SERVER['REQUEST_URI']])

@@ -1,0 +1,15 @@
+{% extends "templates/base.twig" %}
+
+{% block head %}
+<title>Packages - Totally Not Another PHP Framework</title>
+{{ entrypoint('base')|raw }}
+{% endblock %}
+
+{% block body %}
+<div id="main" class="ui inverted attached segment">
+    <div class="ui wide center aligned container">
+        <div class="ui massive inverted header">Composer Packages</div>
+        {{ render('parts.packages.cards', { packages: packagist().packages, centered: true })|raw }}
+    </div>
+</div>
+{% endblock %}
